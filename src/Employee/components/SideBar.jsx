@@ -13,6 +13,7 @@ import { useNavigate } from "react-router-dom/dist";
 import useAuth from "../../Hr/hooks/useAuth";
 
 const SideBar = ({ menu }) => {
+  const nav = useNavigate();
   const {logout} = useAuth();
   const [empData, setEmpData] = useState([]);
   // const loadEmployee = async () => {
@@ -29,6 +30,7 @@ const SideBar = ({ menu }) => {
   // }, []);
   
   const handleLogout = () => {
+    nav('/');
     logout()
   };
 
