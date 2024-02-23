@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const MainFile = ({name}) => {
+  const userName = localStorage.getItem("UserName");
   const navigation = useNavigate();
   const chartData = {
     series: [
@@ -323,9 +324,9 @@ const MainFile = ({name}) => {
           <div className="section-body py-3">
             <div className="container-fluid" style={{ padding: "0" }}>
               <div className="row clearfix">
-                <div className="col-lg-12">
+                <div className="col-lg-12" style={{paddingTop:'30px'}}>
                   <div className="mb-4">
-                  <h4>Welcome {name}!</h4>
+                  <h4>Welcome {userName}!</h4>
                   </div>
                 </div>
               </div>

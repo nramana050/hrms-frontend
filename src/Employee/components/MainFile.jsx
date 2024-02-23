@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 // import useAuth from "../hooks/useAuth"
 const MainFile = ({name}) => {
+  const userName = localStorage.getItem("UserName");
   const navigation = useNavigate();
   console.log(name);
   const revenueData = {
@@ -236,7 +237,7 @@ const MainFile = ({name}) => {
                   {/* {empData.map((item, index) => { */}
                     {/* return ( */}
                       <div className="mb-4">
-                      <h4>Welcome {name}!</h4>
+                      <h4>Welcome {userName}!</h4>
 
                         <p>Your performance is looking good</p>
                       </div>

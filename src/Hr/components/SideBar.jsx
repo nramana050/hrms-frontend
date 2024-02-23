@@ -23,11 +23,13 @@ import { useNavigate } from "react-router-dom/dist";
 import useAuth from "../hooks/useAuth";
 
 const SideBar = ({ menu }) => {
+  const nav = useNavigate();
   const {logout} = useAuth();
   const classBtnName = menu ? "mobile-sidebar-container" : "";
   const classSidebarName = menu ? "mobile-sidebar" : "";
 
   const handleLogout = () => {
+    nav('/');
     logout()
   };
 

@@ -21,9 +21,11 @@ const useAuth = () => {
                 if (authenticated) {
                     console.log("User Name:", client.idTokenParsed.name);
                     setName(client.idTokenParsed.name);
-                   localStorage.setItem("TokenOrive", client.token)
+                    localStorage.setItem("UserName", client.idTokenParsed.name);
+                    localStorage.setItem("AuthToken", client.token);
                     setToken(client.token);
                     setRoles(client.resourceAccess.myclient.roles);
+                    localStorage.setItem("Role",client.resourceAccess.myclient.roles);
                 } else {
                     console.error("Failed to authenticate");
                 }
@@ -39,8 +41,9 @@ const useAuth = () => {
     const isEmployee = roles.includes("client_Employee");
 
     const logout = () => {
+        localStorage.removeItem("AuthToken");
+        localStorage.removeItem("UserName");
         client.logout();
-        localStorage.removeItem("TokenOrive")
     };
     
 

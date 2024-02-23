@@ -22,10 +22,11 @@ import EmployeeProfile from "./employees/Mainfile/EmployeeProfile";
 import TransferProfile from "./transfers/mainfile/TransferPofile";
 import EditPromotion from "./promotions/Mainfile/EditPromotion";
 import EditWarning from "./warnings/Mainfile/EditWarning";
-import Certificate from './Letter/certificate format/CertificateForm';
-import ExperienceLetter from './Letter/experience-letter/ShowExLetter';
-import JoiningLetterExp from './Letter/Joining letter exp/JoiningExperienceLetter';
-import JoiningLetterIntern from './Letter/joining-letter intr/ShowJoiningLetter';
+// import Certificate from './Letter/certificate format/CertificateForm';
+// import ExperienceLetter from './Letter/experience-letter/ShowExLetter';
+// import JoiningLetterExp from './Letter/Joining letter exp/JoiningExperienceLetter';
+// import JoiningLetterIntern from './Letter/joining-letter intr/ShowJoiningLetter';
+
 const routesData = [
   { path: "/hr/employee/awards", element: <AwardsView /> },
   { path: "/employee/edit-awards/:id", element: <EditAward /> },
@@ -49,10 +50,10 @@ const routesData = [
   { path: "/employee/edit-travel/:id", element: <EditTravel /> },
   { path: "/hr/employee/warning", element: <WarningView /> },
   { path: "/employee/edit-warning/:id", element: <EditWarning /> },
-  { path: "/hr/employee/certificate", element: <Certificate /> },
-  { path: "/hr/employee/experienceLetter", element: <ExperienceLetter /> },
-  { path: "/hr/employee/joiningLetterExp", element: <JoiningLetterExp /> },
-  { path: "/hr/employee/joiningLetterIntern", element: <JoiningLetterIntern /> },
+  // { path: "/hr/employee/certificate", element: <Certificate /> },
+  // { path: "/hr/employee/experienceLetter", element: <ExperienceLetter /> },
+  // { path: "/hr/employee/joiningLetterExp", element: <JoiningLetterExp /> },
+  // { path: "/hr/employee/joiningLetterIntern", element: <JoiningLetterIntern /> },
 ];
 
 const RoutingOrganisation = () => {
